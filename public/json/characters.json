@@ -1,0 +1,15 @@
+{
+    
+    "personajes":[
+        {
+            "name":"Gojo",
+            "img":"../../src/img/PJ/gojo.png"
+        },
+        {
+            "name":"Auron",
+            "img":"../../src/img/PJ/Auron.png"
+        }
+    ]
+    
+    
+}

@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+
+
+// VIDEO-IMG
+import videoSuccession from '/Videos/SOF_AMV.mp4'
+import txtPortada from '../img/Letras_Portada.png'
+
+// COMPONENTS
+import  Switch  from './switch.astro';
+import { PersonalDate } from './date';
+import { Characters } from './Characters';
+---
+
+<div class="grid 2xl:grid-cols-3 2xl:grid-rows-2 gap-5 py-16 xl:grid-cols-1 xl:grid-rows-1 ">
+
+    <!-- TITLE -->
+    <section id="title" class="ventoGridLight row-span-1  bg-black w-[540px]  flex flex-col justify-center rounded-lg">
+        <Image  src={txtPortada} alt='title'></Image>
+    </section>
+
+    <!-- MENU -->
+    <div class="grid grid-cols-2 grid-rows-2 gap-3 ">
+        <!-- CAMBIO FONDO -->
+        <section class="border-2 bg-white border-black rounded-lg flex flex-col justify-center items-center">
+           <Switch></Switch>
+        </section>
+
+        <section class="ventoGridLight rounded-lg flex flex-col justify-center items-center gap-2">
+            <PersonalDate client:load/>
+       </section>
+        <section class="ventoGridLight rounded-lg">
+             ?????? 
+        </section>
+        <section class="ventoGridLight rounded-lg">
+            ??????  
+        </section>
+    </div>
+
+    <!-- CHARACTERS -->
+    <section class="ventoGridLight border-2 border-black rounded-lg row-span-2 flex flex-col justify-center items-center">
+        <Characters/>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="w-[540px] h-full rounded-lg ventoGridLight">
+        <video id="opening"  autoplay muted controls>
+            <source src={videoSuccession}   type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- ENEMIGOS -->
+    <section class="ventoGridLight rounded-lg">
+        <h1>Enemy</h1>
+    </section>
+
+</div>
+
+<style>
+    .ventoGridLight{
+        border: 2px solid white;
+        box-shadow: 2px 2px 0px rgba(255, 255, 255, 1)
+    }
+
+    .ventoGridDark{
+        border: 1px solid black;
+        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8)
+
+    }
+</style>
