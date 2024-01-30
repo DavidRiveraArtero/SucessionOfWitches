@@ -1,0 +1,15 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper{
+    position: absolute!important;
+    cursor: grab;
+}
+
+.swiper-wrapper:active{
+    cursor: grabbing;
+}
+
+  
