@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 
 // VIDEO-IMG
 import videoSuccession from '/Videos/SOF_AMV.mp4'
-import txtPortada from '../img/Letras_Portada.png'
+import txtPortada from '../assets/img/Letras_Portada.webp'
 
 // COMPONENTS
 import  Switch  from './switch.astro';
@@ -12,11 +12,11 @@ import { PersonalDate } from './date';
 import { Characters } from './Characters';
 ---
 
-<div  class="grid 2xl:grid-cols-3 2xl:grid-rows-2 gap-5 py-16 sm:grid-cols-1 sm:grid-rows-1 ">
+<div  class="grid 2xl:grid-cols-3 2xl:grid-rows-2 gap-8 py-16 sm:grid-cols-1 sm:grid-rows-1 ">
 
     <!-- TITLE -->
     <section id="title" class="ventoGridLight row-span-1  bg-black w-[540px]  flex flex-col justify-center rounded-lg">
-        <Image  src={txtPortada} alt='title'></Image>
+        <Image src={txtPortada} alt='title'></Image>
     </section>
 
     <!-- MENU -->
@@ -44,7 +44,7 @@ import { Characters } from './Characters';
 
     <!-- VIDEO -->
     <section class="w-[540px] h-full rounded-lg ventoGridLight">
-        <video id="opening"  autoplay muted controls>
+        <video class="rounded-lg" id="opening"  autoplay muted controls>
             <source src={videoSuccession}   type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -59,13 +59,13 @@ import { Characters } from './Characters';
 
 <style>
     .ventoGridLight{
-        border: 2px solid white;
-        box-shadow: 2px 2px 0px rgba(255, 255, 255, 1)
+        border: 1px solid black;
+        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.369)
     }
 
     .ventoGridDark{
         border: 1px solid black;
-        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8)
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.369)
     }
 
 </style>
